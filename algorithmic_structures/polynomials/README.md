@@ -8,7 +8,7 @@
 p1 = Polynomial([1, 1, 0])
 p2 = Ploynomial([1, 1])
 ```
-(Коэффициент при x<sup>0</sup> равен 1)
+(Коэффициент при x<sup>0</sup> равен 0)
 
 Для работы в кольце вычетов необходимо поменять переменную NUMERIC_TYPE_FOR_COEFFICIENTS в `config.py`
 
