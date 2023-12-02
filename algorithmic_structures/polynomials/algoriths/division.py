@@ -1,6 +1,6 @@
 from typing import TYPE_CHECKING
 
-from algorithmic_structures.config import Config
+from algorithmic_structures.polynomials.config import Config
 from algorithmic_structures.polynomials.algoriths.multiply import multiply_by_x_degree
 
 if TYPE_CHECKING:

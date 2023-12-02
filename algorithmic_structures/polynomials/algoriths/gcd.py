@@ -1,6 +1,6 @@
 from itertools import count
 
-from algorithmic_structures.config import Config
+from algorithmic_structures.polynomials.config import Config
 from algorithmic_structures.polynomials.structures.polynomial import Polynomial
 
 

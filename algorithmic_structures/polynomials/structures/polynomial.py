@@ -1,8 +1,8 @@
 import math
 from fractions import Fraction
-from typing import Iterable, Type, Self, Any
+from typing import Iterable, Self, Any
 
-from algorithmic_structures.config import Config
+from algorithmic_structures.polynomials.config import Config
 from algorithmic_structures.polynomials.algoriths.addition import add_polynomials
 from algorithmic_structures.polynomials.algoriths.division import divide_with_remainder
 from algorithmic_structures.polynomials.algoriths.inverse import inverse_polynomial
