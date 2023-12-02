@@ -44,12 +44,6 @@ class Modulo:
         return NotImplemented
 
     def __truediv__(self, other):
-        # if isinstance(other, Modulo):
-        #     return Modulo(self.value + other.value, modulus=self.modulus)
-        # if self.residue is None:
-        #     raise TypeError('expecting a congruence class or integer')
-
-        # other = self._cc(other)
         other = self.to_modulo(other)
         (gcd_, inv, _) = egcd(other.value, self.modulus)
         if gcd_ > 1:

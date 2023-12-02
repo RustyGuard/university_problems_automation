@@ -1,12 +1,13 @@
 import math
 from fractions import Fraction
-from typing import Iterable, Type, Self
+from typing import Iterable, Type, Self, Any
 
+from algorithmic_structures.config import Config
 from algorithmic_structures.polynomials.algoriths.addition import add_polynomials
 from algorithmic_structures.polynomials.algoriths.division import divide_with_remainder
 from algorithmic_structures.polynomials.algoriths.inverse import inverse_polynomial
 from algorithmic_structures.polynomials.algoriths.multiply import multiply_by_number, multiply_polynomials
-from algorithmic_structures.polynomials.algoriths.utils import strip_zeros
+from algorithmic_structures.polynomials.algoriths.utils import strip_zeros, convert_to_config_type
 from algorithmic_structures.polynomials.structures.modulo import Modulo
 
 
@@ -14,10 +15,8 @@ class Polynomial[T]:
     ONE: 'Polynomial'
     ZERO: 'Polynomial'
 
-    def __init__(self, coefficients: Iterable[float], number_type: Type[T] = Fraction):
-        """number_type - функция для преобразования значений к необходимому типу"""
-        self.coefficients: tuple[T] = tuple(strip_zeros(coefficients, number_type)) or (number_type(0),)
-        self.number_type = number_type
+    def __init__(self, coefficients: Iterable[Any]):
+        self.coefficients: tuple[T] = tuple(convert_to_config_type(strip_zeros(coefficients))) or (0,)
 
     def __str__(self):
         if not self:
@@ -38,8 +37,9 @@ class Polynomial[T]:
             if degree:
                 if coefficient == 1:
                     coefficient = ''
-                # if coefficient == -1:
-                #     coefficient = '-'
+                if Config.REPLACE_MINUS_ONE_X:
+                    if coefficient == -1:
+                        coefficient = '-'
 
             result.append(f'{coefficient}{x_with_power}')
         return ' + '.join(result)
@@ -86,7 +86,7 @@ class Polynomial[T]:
         if not self:
             return self
         major = self.coefficients[0]
-        return self.__class__((c / major for c in self.coefficients), number_type=self.number_type)
+        return self.__class__((c / major for c in self.coefficients))
 
 
 Polynomial.ONE = Polynomial((1,))

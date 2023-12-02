@@ -13,4 +13,4 @@ p2 = Polynomial([1, 1])
 # p1 = Polynomial([3, 0, 3, 3, 0, 2, 4], number_type=mod5)  # Correct. It is x^2 + x + 1
 # p2 = Polynomial([2, 3, 3, 3, 3, 3, 1], number_type=mod5)
 
-print(polynomial_gcd(p1, p2).normalize())
+print(f'Ответ: {polynomial_gcd(p1, p2).normalize()}')

@@ -5,4 +5,4 @@ if TYPE_CHECKING:
 
 
 def inverse_polynomial(p: 'Polynomial') -> 'Polynomial':
-    return p.__class__((-c for c in p.coefficients), number_type=p.number_type)
+    return p.__class__((-c for c in p.coefficients))

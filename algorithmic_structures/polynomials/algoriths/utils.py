@@ -1,15 +1,20 @@
 from numbers import Number
-from typing import Iterable, Type
+from typing import Iterable
+
+from algorithmic_structures.config import Config
 
 
-def strip_zeros[T](coefficients: Iterable[Number], number_type: Type[T]) -> Iterable[T]:
+def strip_zeros[T](coefficients: Iterable[T]) -> Iterable[T]:
     """Обрубить начальные нули"""
-    if not number_type:
-        number_type = lambda x: x
     coefficients = iter(coefficients)
     for value in coefficients:
         if value:
-            yield number_type(value)
+            yield value
             break
     for c in coefficients:
-        yield number_type(c)
+        yield c
+
+
+def convert_to_config_type(coefficients: Iterable[Number]) -> Iterable[Config.NUMERIC_TYPE_FOR_COEFFICIENTS]:
+    for coefficient in coefficients:
+        yield Config.NUMERIC_TYPE_FOR_COEFFICIENTS(coefficient)

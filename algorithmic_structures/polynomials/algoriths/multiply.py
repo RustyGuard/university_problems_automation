@@ -6,13 +6,13 @@ if TYPE_CHECKING:
 
 def multiply_by_number(p: 'Polynomial', k: float) -> 'Polynomial':
     result = [c * k for c in p.coefficients]
-    return p.__class__(result, number_type=p.number_type)
+    return p.__class__(result)
 
 
 def multiply_by_x_degree(p: 'Polynomial', degree: int) -> 'Polynomial':
     result = list(p.coefficients)
     result.extend([0] * degree)
-    return p.__class__(result, number_type=p.number_type)
+    return p.__class__(result)
 
 
 def multiply_polynomials(p1: 'Polynomial', p2: 'Polynomial'):
