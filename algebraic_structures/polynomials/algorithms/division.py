@@ -1,15 +1,15 @@
 from typing import TYPE_CHECKING
 
-from algorithmic_structures.polynomials.config import Config
-from algorithmic_structures.polynomials.algoriths.multiply import multiply_by_x_degree
+from algebraic_structures.polynomials.config import Config
+from algebraic_structures.polynomials.algorithms.multiply import multiply_by_x_degree
 
 if TYPE_CHECKING:
-    from algorithmic_structures.polynomials.structures.polynomial import Polynomial
+    from algebraic_structures.polynomials.structures.polynomial import Polynomial
 
 
 def divide_with_remainder(p1: 'Polynomial', p2: 'Polynomial'):
     """Использует алгоритм Евклида для деления двух многочленов"""
-    from algorithmic_structures.polynomials.structures.polynomial import Polynomial
+    from algebraic_structures.polynomials.structures.polynomial import Polynomial
     result = Polynomial.ZERO
     current_remainder = p1
 

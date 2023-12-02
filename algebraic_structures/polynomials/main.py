@@ -1,6 +1,6 @@
-from algorithmic_structures.polynomials.algoriths.gcd import polynomial_gcd
-from algorithmic_structures.polynomials.structures.modulo import Modulo, mod5
-from algorithmic_structures.polynomials.structures.polynomial import Polynomial
+from algebraic_structures.polynomials.algorithms.gcd import polynomial_gcd
+from algebraic_structures.polynomials.structures.modulo import Modulo, mod5
+from algebraic_structures.polynomials.structures.polynomial import Polynomial
 
 # p1 = Polynomial([1, 3, -1, -4, -3])  # Correct. It is x + 3
 # p2 = Polynomial([3, 10, 2, -3])

@@ -1,7 +1,7 @@
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from algorithmic_structures.polynomials.structures.polynomial import Polynomial
+    from algebraic_structures.polynomials.structures.polynomial import Polynomial
 
 
 def inverse_polynomial(p: 'Polynomial') -> 'Polynomial':

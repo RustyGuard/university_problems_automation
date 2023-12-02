@@ -1,7 +1,7 @@
 from numbers import Number
 from typing import Iterable
 
-from algorithmic_structures.polynomials.config import Config
+from algebraic_structures.polynomials.config import Config
 
 
 def strip_zeros[T](coefficients: Iterable[T]) -> Iterable[T]:

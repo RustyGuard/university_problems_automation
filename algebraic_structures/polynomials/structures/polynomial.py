@@ -2,13 +2,13 @@ import math
 from fractions import Fraction
 from typing import Iterable, Self, Any
 
-from algorithmic_structures.polynomials.config import Config
-from algorithmic_structures.polynomials.algoriths.addition import add_polynomials
-from algorithmic_structures.polynomials.algoriths.division import divide_with_remainder
-from algorithmic_structures.polynomials.algoriths.inverse import inverse_polynomial
-from algorithmic_structures.polynomials.algoriths.multiply import multiply_by_number, multiply_polynomials
-from algorithmic_structures.polynomials.algoriths.utils import strip_zeros, convert_to_config_type
-from algorithmic_structures.polynomials.structures.modulo import Modulo
+from algebraic_structures.polynomials.config import Config
+from algebraic_structures.polynomials.algorithms.addition import add_polynomials
+from algebraic_structures.polynomials.algorithms.division import divide_with_remainder
+from algebraic_structures.polynomials.algorithms.inverse import inverse_polynomial
+from algebraic_structures.polynomials.algorithms.multiply import multiply_by_number, multiply_polynomials
+from algebraic_structures.polynomials.algorithms.utils import strip_zeros, convert_to_config_type
+from algebraic_structures.polynomials.structures.modulo import Modulo
 
 
 class Polynomial[T]:

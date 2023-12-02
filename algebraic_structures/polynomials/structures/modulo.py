@@ -1,6 +1,6 @@
 from fractions import Fraction
 
-from algorithmic_structures.polynomials.algoriths.egcd import egcd
+from algebraic_structures.polynomials.algorithms.egcd import egcd
 
 
 class Modulo:

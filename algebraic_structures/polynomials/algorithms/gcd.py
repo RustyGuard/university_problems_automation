@@ -1,7 +1,7 @@
 from itertools import count
 
-from algorithmic_structures.polynomials.config import Config
-from algorithmic_structures.polynomials.structures.polynomial import Polynomial
+from algebraic_structures.polynomials.config import Config
+from algebraic_structures.polynomials.structures.polynomial import Polynomial
 
 
 def polynomial_gcd(p1: Polynomial, p2: Polynomial) -> 'Polynomial':
